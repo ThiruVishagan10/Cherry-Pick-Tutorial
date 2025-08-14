@@ -1,0 +1,23 @@
+# Git Cherry-Pick Tutorial
+
+## 1. Create a new branch and make a commit
+
+git checkout -b feature-branch
+echo "Hello from feature branch" > hello.txt
+git add hello.txt
+git commit -m "Add hello.txt in feature branch"
+
+## 2. Switch back to main branch
+
+git checkout main
+
+## 3. Cherry-pick the commit from feature-branch
+
+# Find the commit hash from 'git log' on feature-branch
+git cherry-pick <commit-hash>
+
+## 4. Verify the changes
+
+cat hello.txt
+
+# Done! The commit from feature-branch is now
